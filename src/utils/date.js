@@ -33,3 +33,22 @@ export function encodeBirthdate(date, isFemale) {
   let day = encodeBirthday(d.getDate(), isFemale)
   return year + month + day
 }
+
+export function decodeBirthdate(str) {
+  const s = str.trim().toUpperCase()
+  let year = s.slice(0, 2)
+  let month = Object.values(MONTHS).findIndex(v => v === s.slice(2, 3)) + 1
+  let day = +s.slice(3)
+  let isFemale = false
+  if (day > 40) {
+    isFemale = true
+    day = day - 40
+  }
+
+  return {
+    year,
+    month,
+    day,
+    isFemale,
+  }
+}
