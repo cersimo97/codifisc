@@ -4,7 +4,8 @@
   "description": "Utility to encode and decode italian TIN (Codice Fiscale).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "start": "babel-node src/index.js"
   },
   "keywords": [
     "tin",
@@ -14,5 +15,10 @@
     "cf"
   ],
   "author": "Simone Cernuschi",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.19.0"
+  }
 }
