@@ -1,6 +1,6 @@
-import { getCheckChar } from './utils/check'
-import { encodeCity } from './utils/city'
-import { encodeBirthdate } from './utils/date'
+import { getCheckChar, isValidCF } from './utils/check'
+import { decodeCity, encodeCity } from './utils/city'
+import { decodeBirthdate, encodeBirthdate } from './utils/date'
 import { encodeName } from './utils/names'
 
 /**
@@ -17,7 +17,16 @@ export function encodeCF(firstName, lastName, isFemale, birthdate, birthCity) {
   str +=
     encodeName(lastName) +
     encodeName(firstName) +
-    encodeBirthdate(birthdate) +
+    encodeBirthdate(birthdate, isFemale) +
     encodeCity(birthCity)
   return str + getCheckChar(str)
+}
+
+export function decodeCF(cf) {
+  if (!isValidCF(cf)) {
+    throw new Error('INVALID CODE')
+  }
+  let birthdate = decodeBirthdate(cf.slice(6, 11))
+  let city = decodeCity(cf.slice(11, 15))
+  return { ...birthdate, city }
 }

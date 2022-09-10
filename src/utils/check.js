@@ -115,6 +115,12 @@ export function getCheckChar(str) {
   return REST[r]
 }
 
+export function isValidCF(c) {
+  c = c.toUpperCase().trim()
+  let check = getCheckChar(c.slice(0, c.length - 1))
+  return check === c[c.length - 1]
+}
+
 function encodeOddChar(ch) {
   return ODD_CHAR_VALUES[ch]
 }
