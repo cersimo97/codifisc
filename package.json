@@ -1,6 +1,6 @@
 {
   "name": "codifisc",
-  "version": "1.0.1-2",
+  "version": "1.0.1",
   "description": "Utility to encode and decode italian TIN (Codice Fiscale).",
   "main": "index.js",
   "scripts": {
