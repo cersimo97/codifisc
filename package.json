@@ -12,7 +12,6 @@
     "email": "cersimo97@gmail.com"
   },
   "main": "src/index.js",
-  "bin": "src/index",
   "scripts": {
     "test": "jest",
     "start": "babel-node src/index.js",
