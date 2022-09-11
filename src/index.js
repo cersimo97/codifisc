@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { getCheckChar, isValidCF } from './utils/check'
 import { decodeCity, encodeCity } from './utils/city'
 import { decodeBirthdate, encodeBirthdate } from './utils/date'
