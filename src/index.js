@@ -68,6 +68,6 @@ args
 
 args.parse(process.argv)
 
-if (!args.sub.length) {
+if (process.env.NODE_ENV !== 'test' && !args.sub.length) {
   args.showHelp()
 }
