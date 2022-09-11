@@ -66,7 +66,7 @@ args
   )
   .example('codifisc decode CRNSMN92L51L400G', 'Extract info from CF string')
 
-const flags = args.parse(process.argv)
+args.parse(process.argv)
 
 if (!args.sub.length) {
   args.showHelp()
