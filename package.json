@@ -12,9 +12,10 @@
     "email": "cersimo97@gmail.com"
   },
   "main": "src/index.js",
-  "bin": "src/index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "jest",
+    "posttest": "npm run build",
     "start": "babel-node src/index.js",
     "build": "babel src -d dist --copy-files"
   },

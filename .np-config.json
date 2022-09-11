@@ -1,4 +1,5 @@
 {
   "releaseDraft": false,
-  "2fa": false
+  "2fa": false,
+  "contents": "dist"
 }
