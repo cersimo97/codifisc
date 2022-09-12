@@ -15,7 +15,7 @@ const args = require('args')
  * @param {String} birthCity
  * @returns Italian TIN (Codice Fiscale) string.
  */
-function encodeCF(firstName, lastName, isFemale, birthdate, birthCity) {
+function encodeCF({ firstName, lastName, isFemale, birthdate, birthCity }) {
   let str = ''
   str +=
     encodeName(lastName) +
@@ -41,7 +41,15 @@ args
     function (name, sub, options) {
       const { firstname, lastname, male, birthdate, city } = options
       const d = new Date(birthdate)
-      console.log(encodeCF(firstname, lastname, !male, d, city))
+      console.log(
+        encodeCF({
+          firstName: firstname,
+          lastName: lastname,
+          isFemale: !male,
+          birthdate: d,
+          birthCity: city,
+        })
+      )
     }
   )
   .command(
