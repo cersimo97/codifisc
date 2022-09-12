@@ -1,4 +1,4 @@
-import { getCheckChar, isValidCF } from '../src/utils/check'
+const { getCheckChar, isValidCF } = require('../src/utils/check')
 
 describe('Check-related', () => {
   const validCF = 'CRNSMN97P08L400G'

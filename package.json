@@ -12,12 +12,10 @@
     "email": "cersimo97@gmail.com"
   },
   "main": "src/index.js",
-  "bin": "index.js",
+  "bin": "src/index.js",
   "scripts": {
     "test": "jest",
-    "posttest": "npm run build",
-    "start": "babel-node src/index.js",
-    "build": "babel src -d dist --copy-files"
+    "start": "node src/index.js"
   },
   "keywords": [
     "tin",
@@ -33,10 +31,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.19.0",
-    "@babel/node": "^7.18.10",
-    "@babel/preset-env": "^7.19.0",
     "jest": "^29.0.2"
   },
   "dependencies": {

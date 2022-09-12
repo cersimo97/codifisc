@@ -1,6 +1,6 @@
 const VOWELS = 'AEIOU'
 
-export function encodeName(string) {
+function encodeName(string) {
   let unspaced = string.toUpperCase().trim()
   let cons = Array.from(unspaced)
     .filter(l => Array.from(VOWELS).every(v => v != l))
@@ -11,4 +11,8 @@ export function encodeName(string) {
   let result = cons.concat(vow).slice(0, 3)
   if (result.length < 3) result = result.padEnd(3, 'X')
   return result
+}
+
+module.exports = {
+  encodeName,
 }

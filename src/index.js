@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import { getCheckChar, isValidCF } from './utils/check'
-import { decodeCity, encodeCity } from './utils/city'
-import { decodeBirthdate, encodeBirthdate } from './utils/date'
-import { encodeName } from './utils/names'
-import args from 'args'
+const { getCheckChar, isValidCF } = require('./utils/check')
+const { decodeCity, encodeCity } = require('./utils/city')
+const { decodeBirthdate, encodeBirthdate } = require('./utils/date')
+const { encodeName } = require('./utils/names')
+const args = require('args')
 
 /**
  *
@@ -15,7 +15,7 @@ import args from 'args'
  * @param {String} birthCity
  * @returns Italian TIN (Codice Fiscale) string.
  */
-export function encodeCF(firstName, lastName, isFemale, birthdate, birthCity) {
+function encodeCF(firstName, lastName, isFemale, birthdate, birthCity) {
   let str = ''
   str +=
     encodeName(lastName) +
@@ -25,7 +25,7 @@ export function encodeCF(firstName, lastName, isFemale, birthdate, birthCity) {
   return str + getCheckChar(str)
 }
 
-export function decodeCF(cf) {
+function decodeCF(cf) {
   if (!isValidCF(cf)) {
     throw new Error('INVALID CODE')
   }
@@ -70,4 +70,9 @@ args.parse(process.argv)
 
 if (process.env.NODE_ENV !== 'test' && !args.sub.length) {
   args.showHelp()
+}
+
+module.exports = {
+  encodeCF,
+  decodeCF,
 }

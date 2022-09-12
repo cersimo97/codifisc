@@ -1,7 +1,7 @@
-import CITIES from '../data/cities.json'
-import CODES from '../data/codes.json'
+const CITIES = require('../data/cities.json')
+const CODES = require('../data/codes.json')
 
-export function encodeCity(cityName) {
+function encodeCity(cityName) {
   let cityCode = CITIES[cityName.toUpperCase().trim()]
   if (!cityCode) {
     throw new Error('INVALID CITY')
@@ -10,11 +10,16 @@ export function encodeCity(cityName) {
   }
 }
 
-export function decodeCity(code) {
+function decodeCity(code) {
   let cityName = CODES[code]
   if (!cityName) {
     throw new Error('INVALID CODE')
   } else {
     return cityName
   }
+}
+
+module.exports = {
+  encodeCity,
+  decodeCity,
 }

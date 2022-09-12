@@ -1,4 +1,4 @@
-import { decodeBirthdate, encodeBirthdate } from '../src/utils/date'
+const { decodeBirthdate, encodeBirthdate } = require('../src/utils/date')
 
 describe('Date-related utilities', () => {
   // 2020-06-03

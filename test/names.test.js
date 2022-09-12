@@ -1,4 +1,4 @@
-import { encodeName } from '../src/utils/names'
+const { encodeName } = require('../src/utils/names')
 
 describe('Names-related utilities', () => {
   it('Name w/ enough consonants', () => {

@@ -1,4 +1,4 @@
-import { decodeCF } from '../src'
+const { decodeCF } = require('../src')
 
 describe('Main functions', () => {
   it('Should encode a CF', () => {})

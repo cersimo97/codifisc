@@ -1,4 +1,4 @@
-import { decodeCity, encodeCity } from '../src/utils/city'
+const { decodeCity, encodeCity } = require('../src/utils/city')
 
 describe('City-related', () => {
   it('Should encode a city correctly', () => {

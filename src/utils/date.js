@@ -25,7 +25,7 @@ function encodeBirthday(day, isFemale) {
   }
 }
 
-export function encodeBirthdate(date, isFemale) {
+function encodeBirthdate(date, isFemale) {
   let d = new Date(date)
   let year = d.getFullYear().toString()
   year = year.slice(year.length - 2, year.length)
@@ -34,7 +34,7 @@ export function encodeBirthdate(date, isFemale) {
   return year + month + day
 }
 
-export function decodeBirthdate(str) {
+function decodeBirthdate(str) {
   const s = str.trim().toUpperCase()
   let year = s.slice(0, 2)
   let month = Object.values(MONTHS).findIndex(v => v === s.slice(2, 3)) + 1
@@ -51,4 +51,9 @@ export function decodeBirthdate(str) {
     day,
     isFemale,
   }
+}
+
+module.exports = {
+  encodeBirthdate,
+  decodeBirthdate,
 }

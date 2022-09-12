@@ -105,7 +105,7 @@ const REST = {
   25: 'Z',
 }
 
-export function getCheckChar(str) {
+function getCheckChar(str) {
   str = str.toUpperCase().trim()
   let odd = Array.from(str).filter((_, i) => i % 2 === 0)
   let even = Array.from(str).filter((_, i) => i % 2 !== 0)
@@ -115,7 +115,7 @@ export function getCheckChar(str) {
   return REST[r]
 }
 
-export function isValidCF(c) {
+function isValidCF(c) {
   c = c.toUpperCase().trim()
   let check = getCheckChar(c.slice(0, c.length - 1))
   return check === c[c.length - 1]
@@ -127,4 +127,9 @@ function encodeOddChar(ch) {
 
 function encodeEvenChar(ch) {
   return EVEN_CHAR_VALUES[ch]
+}
+
+module.exports = {
+  getCheckChar,
+  isValidCF,
 }
