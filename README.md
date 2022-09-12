@@ -41,7 +41,7 @@ let obj = decodeCF(cf)
 
   Examples:
     - Encode a CF string from data
-    $ codifisc encode -f <firstname> -l <lastname> -b <000000000000> -c <city>
+    $ codifisc encode -f <firstname> -l <lastname> -n <000000000000> -c <city>
 
     - Extract info from CF string
     $ codifisc decode CRNSMN92L51L400G
