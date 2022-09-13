@@ -5,9 +5,9 @@ Utility to encode and decode italian TIN (Codice Fiscale)
 ## Usage
 
 ```javascript
-import { encodeCF } from 'codifisc'
+const { encodeCF } = require('codifisc')
 
-let cf = encodeCF(firstName, lastName, isFemale, birthdate, birthCity)
+let cf = encodeCF({ firstName, lastName, isFemale, birthdate, birthCity })
 let obj = decodeCF(cf)
 //
 // obj = {
