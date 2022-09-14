@@ -1,5 +1,7 @@
 # codifisc
 
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/cersimo97/68d8c125385b7b31a78d4c624e6e4ce2/raw/badge.json)
+
 Utility to encode and decode italian TIN (Codice Fiscale)
 
 ## Usage
