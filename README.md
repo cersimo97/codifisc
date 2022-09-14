@@ -1,6 +1,7 @@
 # codifisc
 
 ![npm](https://img.shields.io/npm/v/codifisc)
+[![Featured on Openbase](https://badges.openbase.com/js/featured/codifisc.svg?token=ZR9igomvh6X4tDhFomtFIC6qHQUwKxZf3T1mBp6XeWI=)](https://openbase.com/js/codifisc?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 Utility to encode and decode italian TIN (Codice Fiscale)
 
