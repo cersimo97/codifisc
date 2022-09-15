@@ -1,6 +1,6 @@
 {
   "name": "codifisc",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Utility to encode and decode italian TIN (Codice Fiscale).",
   "repository": {
     "type": "git",
